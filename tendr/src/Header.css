@@ -1,3 +1,17 @@
 .header {
   display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #f9f9f9;
+  align-items: center;
+}
+
+.hockeySticks {
+  color: purple;
+  height: 40px;
+  object-fit: contain;
+  /* keeps the aspect ratio clean */
+}
+
+.header_icons {
+  padding: 20px;
 }
