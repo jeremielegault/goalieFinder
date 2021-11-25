@@ -19,9 +19,12 @@ function TinderCards() {
 
   useEffect(() => {
     // This is where the code runs
+    // on snapshot: take a picture of the database, give you back all the documents inside that snapshot. Get me all of the documents inside of the snapshot. Doc data is the name and url from the database
     database
       .collection("people")
-      .onSnapshot((snapshot) => snapshot.docs.map((doc) => doc.data()));
+      .onSnapshot((snapshot) =>
+        setPeople(snapshot.docs.map((doc) => doc.data()))
+      );
     // this will run once when the component loads, and never
   }, []);
 
